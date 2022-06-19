@@ -1,0 +1,116 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="style.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+    
+    body
+    .container
+      //- 上方導覽列
+      .control
+        a(href='#').logo
+          img(src="assets/images/logo.jpg", alt="alt", height="100%", width="100%")
+        a(href='#').navbar-block.branch 
+          span.Find-A-Hotel Find A Hotel
+          i.fas.fa-caret-down
+        a(href='#').navbar-block.lang 
+          span.English English  
+          i.fas.fa-caret-down
+      .info  
+        a(href='#').Story
+          span STORY
+        a(href='#').Experience
+          span EXPERIENCE
+        ul
+          li
+            img(src="assets/icon/member.svg", alt="",width="16.7" height="16")
+          li
+            img(src="assets/icon/cart.svg", alt="",width="20.7" height="20.5")
+          li
+            img(src="assets/icon/zoom.svg", alt="",width="16.7" height="16")
+        a(href='#').btn
+          img(src="assets/images/nav.jpg", alt="alt",width="43" height="43")
+    main
+      //- 商品資訊
+      .product-detail
+        .product-image
+          .control-navbarBack
+              i.fas.fa-chevron-left
+              p.Back Back
+              .spread
+              p.NewArrival New Arrival 
+          .control-image
+            img(src="assets/images/photo.jpg", alt="alt", width="100%" height="100%")
+          .control-swiper 
+            p.prev-next PREV
+            .swiper 
+            p.prev-next NEXT
+            p.number 0 / 6
+        .product-info
+          .info-top
+            img(src="assets/icon/favorite-line.svg", alt="",height ="16", width="18")
+            p#wishlist Wishlist
+            img(src="assets/icon/share.svg", alt="",height ="16", width="18")
+          .info-info
+            p#product-series Landscape series
+              h1#product-name The Wizard of Oz
+            p#product-detail Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. 
+          
+          .info-price
+            p Member price
+            .pricetag
+              p#price-sale NT $44,900
+              p#price-original NT $45,900
+              i.fas.fa-caret-down
+          .info-color
+            .color-green
+            .color-blue
+            .color-purple
+            .color-red
+          .info-size
+            .size-s S
+            .size-m M
+            .size-l L
+            .size-xl XL
+          .info-quantity
+           .quantity-text Quantity
+           .quantity-number
+            .number-minus -
+            .number-number 1
+            .number-plus +
+          .info-giftservice-addtocart
+            .giftservice Gift Service
+            .addtocart ADD TO CART
+          .info-others
+            .others.others-promotions
+                          
+              //- img(src="./assets/icon/tag.svg", alt="alt",width="14", height="14")
+              .promotions Promotions
+              .plus +
+            .others.others-delivery 
+              .delivery Delivery Restrictions
+              .plus +
+            .others.others-precautions
+              .precautions Precautions
+              .plus +
+    .anchor-navbar
+      ul.navbar-intro-spec-related
+        li.navbar-intro Introduction
+        li.navbar-spec Specification
+        li.navbar-related Related Products
+
+
+
+              
+
+           
+       
+        
+        
+
+        
+

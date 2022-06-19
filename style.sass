@@ -1,0 +1,356 @@
+@font-face 
+    font-family: JaguarJC-Bold
+    src: url(./assets/fonts/JaguarJC/Bold/JaguarJC-Bold.woff)
+@font-face 
+    font-family: JaguarJC-Book
+    src: url(./assets/fonts/JaguarJC/Book/JaguarJC-Book.woff)
+@font-face 
+    font-family: JaguarJC-BookItalic
+    src: url(./assets/fonts/JaguarJC/BookItalic/JaguarJC-BookItalic.woff)
+@font-face 
+    font-family: MyraidPro-Black
+    src: url(./assets/fonts/MyraidPro/Bold/MYRAIDPRO-BLACK.OTF)
+@font-face 
+    font-family: MyraidPro-Bold
+    src: url(./assets/fonts/MyraidPro/Black/MYRAIDPRO-BOLD.woff)
+@font-face 
+    font-family: MyraidPro-Light
+    src: url(./assets/fonts/MyraidPro/Light/MYRAIDPRO-LIGHT.woff)
+@font-face 
+    font-family: MyraidPro-Regular
+    src: url(./assets/fonts/MyraidPro/Regular/MyraidPro-Regular.woff)
+@font-face 
+    font-family: Roboto-Regular
+    src: url(./assets/fonts/Roboto/Roboto-Regular.woff)
+@font-face 
+    font-family: SEGUIEMJ
+    src: url(./assets/fonts/SEGUIEMJ/SEGUIEMJ.woff)
+html
+  font-family: JaguarJC-Book
+  padding: 0
+  margin: 0
+//導覽列
+.container
+  display: flex
+  height:65px
+  width:100%
+  padding-right: 35px
+  position: fixed
+  top: 0
+  left: 0
+  margin-top: 0
+  z-index: 999
+  background: white
+  .control
+    display: flex
+    width: 50%
+    .logo
+      width:100px
+      background:
+        image: url(https://i.imgur.com/XYOw3kr.jpg)
+        repeat: no-repeat
+        size: cover
+    .branch
+      width: 200px
+      background-color:#ededed
+      text-decoration: none
+      display: flex
+      justify-content: center
+      align-items: center
+      color: black
+      .Find-A-Hotel
+        font:
+          family: JaguarJC-Bold
+          size: 14px
+          stretch: normal
+          style: normal
+        line-height: 2.14
+        letter-spacing: 0.7px
+        text-align: left
+        margin-right: 13px
+      .i
+        width: 10px
+        height: 5px
+        
+       
+    .lang
+      text-align: left
+      width: 660px
+      font-size: 14px
+      margin: 24px 10px 75px 30px
+      text-decoration: none
+      color: black
+      letter-spacing: 0.7px            
+  .info
+    display: flex
+    margin-left: 400px
+   
+    %Story-Experience
+      width: 94px
+      height: 10px
+      font-family: JaguarJC
+      font-size: 15px
+      line-height: 2
+      letter-spacing: 0.75px
+      text-align: left
+      text-decoration: none
+      color: black
+      align-self: center
+      margin:0 28px 20px 28px
+      transition: linear 0.5s
+      &:hover
+        letter-spacing: 2px
+    .Story
+      @extend %Story-Experience
+    .Experience
+      @extend %Story-Experience
+    ul
+      display: flex
+      padding: 0
+      li
+        list-style: none
+        display: flex
+        align-items: center
+        margin: 0 15px
+        transition: 0.5s linear
+        
+        &:hover
+          transform: translateY(-10px)        
+    .btn
+      align-self: center
+      margin-left: 25px
+//商品資訊
+.product-detail
+  height: 1024px
+  padding: 115px 60px 0 60px
+  // border: 1px solid black
+  margin: 0px 38.5px
+  display: flex
+  .product-image
+    min-width: 50%
+    height: 100%
+    // border: 1px solid red
+    .control-navbarBack
+      width: 200px
+      height: 16px
+      padding-bottom: 35px
+      font-size: 16px
+      display: flex
+      // border: 1px solid grey
+      align-items: center
+      .Back
+        padding:0 14px
+      .spread
+        width: 1px
+        height: 12px
+        background-color: #b9b9b9
+      .NewArrival
+        padding:0 14px
+        color: #b9b9b9
+
+    .control-swiper
+      width: 100%
+      height: 20px
+      font-size: 14px
+      display: flex
+      align-items: center
+      justify-content: center
+      // border: 1px solid red
+      padding-top: 30px
+      .swiper
+        width: 60px
+        height: 1px
+        opacity: 0.5
+        background-color: #000
+        margin: 0 10px
+      .number
+        color: #666666
+        margin-left: 10px
+  .product-info
+    max-width: 50%
+    height: 100%
+    padding: 55px 75px 0 75px
+    // border: 1px solid blue
+
+    .info-top
+      display: flex
+      padding: 50px 0 0 0
+      width: 100%
+      justify-content: flex-end
+      letter-spacing: 0.7px
+      #wishlist
+        margin: 0 20px 0 0
+    #product-series
+      width: 100%
+      margin: 0 0 15px 0
+      font-size:18px
+      line-height: 28px 
+      color: #666
+      #product-name
+        margin: 0
+        color: black
+        font-size: 32px
+        line-height: 28px
+    #product-detail
+      font:
+        family: MyriadPro-Light
+        size: 15px
+      line-height: 25px
+      letter-spacing: 0.75px
+      color: #666666
+    .info-price
+      line-height: 28px
+      // padding-left: 16px
+      p
+        font-size: 14px
+        margin: 0
+      .pricetag
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        border-bottom: 1px solid #a9a9a9
+        padding-bottom: 10px
+        #price-sale
+          font-size: 22px
+        #price-original
+          font-size: 16px
+          color: #666
+          text-decoration: line-through
+          // position: relative
+          // right: 200px
+    .info-color
+      display: flex
+      padding: 30px 0
+      
+      %color
+        width: 26px
+        height: 26px
+        border-radius: 50px
+        margin-right: 16px
+         
+      .color-green
+        background-image: url(./assets/images/green.jpg)
+        @extend %color
+      .color-blue
+        background-image: url(./assets/images/blue.jpg)
+        @extend %color
+      .color-purple
+        background-image: url(./assets/images/purple.jpg)
+        @extend %color
+      .color-red
+        background-image: url(./assets/images/red.jpg)
+        @extend %color
+    .info-size
+      display: flex
+      width: 100%
+      border-bottom: 1px solid #a9a9a9
+      padding-bottom: 20px
+      %size
+        width: 66px
+        height: 34px
+        margin-right: 6px
+        background-color: #e4e4e4
+        color: black
+        text-align: center
+        font-size: 14px
+        line-height: 34px
+        letter-spacing: 0.7px
+      .size-s
+        @extend %size
+        background-color: #000
+        color: white
+      .size-m
+        @extend %size
+      .size-l
+        @extend %size
+      .size-xl
+        @extend %size
+    .info-quantity
+      display: flex
+      padding: 20px 0
+      text-align: center
+      .quantity-text
+        width: 54px
+        height: 40px
+        font-size: 14px
+        line-height: 40px
+        padding-right: 20px
+      .quantity-number
+        display: flex
+        width: 120px
+        height: 40px
+        border: 1px solid #a9a9a9
+        line-height: 40px
+        color: #a9a9a9
+        .number-minus
+          width: 25%
+          border-right: 1px solid #a9a9a9
+        .number-number
+          width: 50%
+          border-right: 1px solid #a9a9a9
+          color: black
+        .number-plus
+          width: 25%
+    .info-giftservice-addtocart
+      display: flex
+      text-align: center
+      height: 45px
+      width: 100%
+      line-height: 45px
+      color: white
+      .giftservice
+        width: 50%
+        background: #111218
+      .addtocart
+        width: 50%
+        background: #374558
+    .info-others
+      padding-top: 20px
+      .others
+        display: flex
+        justify-content: space-between
+        border-bottom: 1px solid #a9a9a9
+        height: 40px
+        line-height: 40px
+        padding-left: 40px
+        .plus
+          color: #a9a9a9
+          font-family: JaguarJC-Bold
+        .promotions
+          color: #a50000
+.anchor-navbar
+  margin: 0 38.5px
+  border-top: 1px solid
+  border-bottom: 1px solid
+  height: 55px
+  ul
+    display: flex
+    justify-content: center
+    list-style: none 
+
+    .navbar-spec::before
+      width: 170px
+      content: "\2022"
+      color: #a9a9a9
+      font-weight: bold
+      display: inline-block
+      width: 1em
+      margin: 0 2em
+    .navbar-related::before
+      width: 170px
+      content: "\2022"
+      color: #a9a9a9
+      font-weight: bold
+      display: inline-block
+      width: 1em
+      margin: 0 2em
+
+
+        
+
+      
+         
+
+
+
