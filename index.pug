@@ -15,15 +15,15 @@ html(lang="en")
         a(href='#').logo
           img(src="assets/images/logo.jpg", alt="alt", height="100%", width="100%")
         a(href='#').navbar-block.branch 
-          span.Find-A-Hotel Find A Hotel
+          span.find-a-hotel Find A Hotel
           i.fas.fa-caret-down
         a(href='#').navbar-block.lang 
           span.English English  
           i.fas.fa-caret-down
       .info  
-        a(href='#').Story
+        a(href='#').story
           span STORY
-        a(href='#').Experience
+        a(href='#').experience
           span EXPERIENCE
         ul
           li
@@ -32,13 +32,15 @@ html(lang="en")
             img(src="assets/icon/cart.svg", alt="",width="20.7" height="20.5")
           li
             img(src="assets/icon/zoom.svg", alt="",width="16.7" height="16")
+          img.bookingnow(src="./assets/images/bookingnow.jpg", alt="alt", height="55", width="150")
         a(href='#').btn
           img(src="assets/images/nav.jpg", alt="alt",width="43" height="43")
+        
     main
       //- 商品資訊
-      .product-detail
+      .product-detail-all
         .product-image
-          .control-navbarBack
+          .control-navbar-back
               i.fas.fa-chevron-left
               p.Back Back
               .spread
@@ -53,12 +55,12 @@ html(lang="en")
         .product-info
           .info-top
             img(src="assets/icon/favorite-line.svg", alt="",height ="16", width="18")
-            p#wishlist Wishlist
+            p.wishlist Wishlist
             img(src="assets/icon/share.svg", alt="",height ="16", width="18")
           .info-info
-            p#product-series Landscape series
-              h1#product-name The Wizard of Oz
-            p#product-detail Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. 
+            p.product-series Landscape series
+            h1.product-name The Wizard of Oz
+            p.product-detail Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. 
           
           .info-price
             p Member price
@@ -87,21 +89,148 @@ html(lang="en")
             .addtocart ADD TO CART
           .info-others
             .others.others-promotions
-                          
-              //- img(src="./assets/icon/tag.svg", alt="alt",width="14", height="14")
-              .promotions Promotions
-              .plus +
+              .promotions            
+                img.tag(src="./assets/icon/tag.svg", alt="alt",width="14", height="14")
+                .tag.promotions Promotions
+              img.plus(src="./assets/icon/plus.svg", alt="alt",width="12", height="12")
             .others.others-delivery 
               .delivery Delivery Restrictions
-              .plus +
+              img.plus(src="./assets/icon/plus.svg", alt="alt",width="12", height="12")
             .others.others-precautions
               .precautions Precautions
-              .plus +
+              img.plus(src="./assets/icon/plus.svg", alt="alt",width="12", height="12")
     .anchor-navbar
       ul.navbar-intro-spec-related
         li.navbar-intro Introduction
+        i.fas.fa-caret-down
         li.navbar-spec Specification
         li.navbar-related Related Products
+    .article
+      .article-title  
+        p.title-intro Introduction
+        p.title-content Lorem ipsum dolor sit ame
+      .article-content
+        
+        img.content-img(src="./assets/images/content.jpg", alt="alt", width="525", height="305")
+        .content-title 
+          h2 Create a beautiful corner in your house
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+      .article-content-second 
+        p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+        p The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+      .article-lsc
+        .lsc-all 
+          h3.lsc-title Life style creation
+          h4.lsc-title2 Sense of Ritual
+          p.lsc-content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+          p.lsc-content2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+          .lsc-find-more Find more
+    .specification
+      h1.specification-title Specification
+      p.specification-title2 Lorem ipsum dolor sit ame
+      .specification-content
+        .content
+          .product-name Product-name
+          .product-info The Wizard of Oz
+        .content
+          .product-name Weight
+          .product-info 7.5kg
+        .content
+          .product-name Size
+          .product-info 25x17cm
+        .content
+          .product-name Material
+          .product-info Ceramics
+    .also-like
+      .also-like-top
+        span.also-like-title You may also like...
+        span.also-like-related Related products
+      .also-like-products 
+        .also-like-products-prev
+          .also-like-products-prev-line
+          .also-like-products-prev-text PREV
+        .also-like-products-info.also-like-products-info1
+          img.also-like-products-img(src="./assets/images/also1.jpg", alt="alt", width="315", height="301")
+          .also-like-products-series Home Essentials
+          .also-like-products-name Rose Salt Lamp
+          .also-like-products-price
+            img.also-like-products-price-tag(src="./assets/icon/tag.svg", alt="", width="14", height="14")
+            .also-like-products-price-text NT 29,500
+            .also-like-products-price-line 
+            img.also-like-products-price-cart(src="./assets/icon/cart.svg", alt="", width="20", height="15")
+        .also-like-products-info.also-like-products-info2
+          img.also-like-products-img(src="./assets/images/also2.jpg", alt="alt", width="315", height="301")
+          .also-like-products-series Home Essentials
+          .also-like-products-name Zebra Puzzle Clock
+          .also-like-products-price
+            img.also-like-products-price-tag(src="./assets/icon/tag.svg", alt="", width="14", height="14")
+            .also-like-products-price-og NT 45,900
+            .also-like-products-price-text NT 44,900
+            .also-like-products-price-line 
+            img.also-like-products-price-cart(src="./assets/icon/cart.svg", alt="", width="20", height="15")
+        .also-like-products-info.also-like-products-info3
+          img.also-like-products-img(src="./assets/images/also3.jpg", alt="alt", width="315", height="301")
+          .also-like-products-series Precipitate the mind
+          .also-like-products-name Tea Ceremony
+          .also-like-products-price
+            img.also-like-products-price-tag(src="./assets/icon/tag.svg", alt="", width="14", height="14")
+            .also-like-products-price-og NT 45,900
+            .also-like-products-price-text NT 44,900
+            .also-like-products-price-line 
+            img.also-like-products-price-cart(src="./assets/icon/cart.svg", alt="", width="20", height="15")
+        .also-like-products-info.also-like-products-info4
+          img.also-like-products-img(src="./assets/images/also4.jpg", alt="alt", width="315", height="301")
+          .also-like-products-series Home Essentials
+          .also-like-products-name Hand Coffee Maker
+          .also-like-products-price
+            img.also-like-products-price-tag(src="./assets/icon/tag.svg", alt="", width="14", height="14")
+            .also-like-products-price-text NT 32000
+            .also-like-products-price-line 
+            img.also-like-products-price-cart(src="./assets/icon/cart.svg", alt="", width="20", height="15")
+        .also-like-products-prev.also-like-products-next
+          .also-like-products-prev-text NEXT
+          .also-like-products-prev-line
+    footer 
+      .bottom-top
+        .bottom-top-line
+        .bottom-top-text TOP
+      .bottom-links
+        .bottom-links-top
+          .links-top EXPERIENCE
+          .links-top BOOKING
+          .links-top SHOPPING
+          .links-top VIP
+          .links-top CONTACT
+          .links-top FAQ
+        .bottom-links-below
+          .links-below Gift Card
+          .links-below-line
+          .links-below VIP Service
+          .links-below-line
+          .links-below Shipping Services
+          .links-below-line
+          .links-below Payment Options
+          .links-below-line
+          .links-below.returns Returns & Exchanges
+          
+      .bottom-below     
+        .bottom-below-left
+          .bottom-below-left-top Copyright | Privacy Policy | Protection
+          .bottom-below-left-social
+            img(src="./assets/icon/wechat.svg", alt="", width="24", height="20")
+            img(src="./assets/icon/line.svg", alt="", width="20", height="20")
+            img(src="./assets/icon/youtube-square.svg", alt="", width="21", height="14")
+            img(src="./assets/icon/facebook.svg", alt="", width="10", height="18")
+            img(src="./assets/icon/instagram.svg", alt="", width="17", height="17")
+            img(src="./assets/icon/twitter.svg", alt="", width="20", height="16")
+        .bottom-below-mid
+          input(type="email", placeholder="Email address...")
+          .subscribe SUBSCRIBE
+        .bottom-below-right COPYRIGHT © THE LALU HOTEL,LTD.<br> ALL RIGHTS RESERVED. DESIGNED BY WDD.
+
+
+
 
 
 
