@@ -58,7 +58,7 @@ html
       justify-content: center
       align-items: center
       color: black
-      .Find-A-Hotel
+      .find-a-hotel
         font:
           family: JaguarJC-Bold
           size: 14px
@@ -75,7 +75,6 @@ html
        
     .lang
       text-align: left
-      width: 660px
       font-size: 14px
       margin: 24px 10px 75px 30px
       text-decoration: none
@@ -84,6 +83,7 @@ html
   .info
     display: flex
     margin-left: 400px
+    
    
     %Story-Experience
       width: 94px
@@ -100,9 +100,9 @@ html
       transition: linear 0.5s
       &:hover
         letter-spacing: 2px
-    .Story
+    .story
       @extend %Story-Experience
-    .Experience
+    .experience
       @extend %Story-Experience
     ul
       display: flex
@@ -115,12 +115,14 @@ html
         transition: 0.5s linear
         
         &:hover
-          transform: translateY(-10px)        
+          transform: translateY(-10px)
+    .bookingnow
+      display: none        
     .btn
       align-self: center
       margin-left: 25px
 //商品資訊
-.product-detail
+.product-detail-all
   height: 1024px
   padding: 115px 60px 0 60px
   // border: 1px solid black
@@ -130,7 +132,7 @@ html
     min-width: 50%
     height: 100%
     // border: 1px solid red
-    .control-navbarBack
+    .control-navbar-back
       width: 200px
       height: 16px
       padding-bottom: 35px
@@ -178,20 +180,21 @@ html
       width: 100%
       justify-content: flex-end
       letter-spacing: 0.7px
-      #wishlist
-        margin: 0 20px 0 0
-    #product-series
+      align-items: center
+      .wishlist
+        margin-right: 20px
+    .product-series
       width: 100%
       margin: 0 0 15px 0
       font-size:18px
       line-height: 28px 
       color: #666
-      #product-name
+      .product-name
         margin: 0
         color: black
         font-size: 32px
         line-height: 28px
-    #product-detail
+    .product-detail
       font:
         family: MyriadPro-Light
         size: 15px
@@ -310,6 +313,7 @@ html
       .others
         display: flex
         justify-content: space-between
+        align-items: center
         border-bottom: 1px solid #a9a9a9
         height: 40px
         line-height: 40px
@@ -319,16 +323,24 @@ html
           font-family: JaguarJC-Bold
         .promotions
           color: #a50000
+          display: flex
+          align-items: center
+          .tag
+            margin-right: 10px 
+            position: relative
+            right: 25px            
 .anchor-navbar
   margin: 0 38.5px
   border-top: 1px solid
   border-bottom: 1px solid
   height: 55px
+  
   ul
     display: flex
     justify-content: center
     list-style: none 
-
+    i
+      display: none
     .navbar-spec::before
       width: 170px
       content: "\2022"
@@ -345,6 +357,537 @@ html
       display: inline-block
       width: 1em
       margin: 0 2em
+.article
+  margin: 100px 38.5px 
+  width: 100%
+
+  display: flex
+  flex-direction: column
+
+  .article-title
+    height: 55px
+    .title-intro
+     text-align: center
+     margin: 0
+     font-size: 32px
+     letter-spacing: 1.6px
+    .title-content
+      text-align: center
+      margin: 0
+      font:
+        size: 15px
+        family: MyriadPro-Light
+      line-height: 42px
+      letter-spacing: 0.75px
+  .article-content
+    margin: 50px 420px 0 420px
+    display: flex
+    flex-direction: row
+    .content-img
+      width: 50%
+      padding-right: 32px 
+    .content-title
+      width: 50%
+      h2
+        margin: 0
+        font-size: 22px
+        line-height: 45px
+        letter-spacing: 1.1px
+      p
+        font: 
+          family: MyriadPro-Light
+          size: 15px
+        line-height: 25px
+        letter-spacing: 0.75px
+  .article-content-second
+    margin: 50px 420px 0 420px
+    p
+      font:
+        family: MyriadPro-Light
+        size: 15px
+      line-height: 25px
+      letter-spacing: 0.75px
+  .article-lsc 
+    margin: 0 420px
+    height: 612px
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)
+    .lsc-all
+      padding: 143px 137px
+      .lsc-title
+        font-size: 22px
+        line-height: 30px
+        letter-spacing: 0.88px
+      .lsc-title2
+        font-size: 18px
+        line-height: 28px
+        letter-spacing: 0.9px
+      p
+        font: 
+          size: 15px
+          family: MyriadPro-Light
+      .lsc-find-more
+        width: 220px
+        height: 45px
+        background-color: #000
+        color: white
+        text-align: center
+        line-height: 45px
+.specification
+  margin: 0 210px
+  width: 1500px
+  height: 624px
+  background-color: #ebebeb
+  display: flex
+  flex-direction: column
+  text-align: center
+  .specification-title
+    margin: 108px 0 0 0
+    font-size: 32px
+    line-height: 42px
+    letter-spacing: 1.6px
+  .specification-title2
+    margin: 0 0 55px 0
+    font:
+      family: MyriadPro-Light
+      size: 15px
+    line-height: 42px
+    letter-spacing: 0.75px
+  .specification-content
+    width: 1044px
+    height: 280px
+    border-top: 4px solid black
+    border-bottom: 4px solid black
+    margin: 0 228px
+    .content
+      border-bottom: 1px solid #a9a9a9
+      height: 69px
+      display: flex
+      padding-left: 201px
+      line-height: 69px
+      .product-name
+        width: 116px
+        text-align: left
+      .product-info
+        padding-left: 181px
+.also-like
+  padding: 100px 0
+  width: 100%
+  .also-like-top
+    height: 55px
+    width: 100%
+    line-height: 42px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    text-align: center
+    padding-bottom: 20px
+    .also-like-title
+      font-size: 32px
+      letter-spacing: 1.6px
+    .also-like-related
+      font: 
+        size: 15px
+        family: MyriadPro-Light
+        letter-spacing: 0.75px
+  .also-like-products
+    display: flex
+    .also-like-products-prev
+      height: 300px
+      width: 280px
+      display: flex
+      justify-content: left
+      align-items: center
+      %also-like-products-line
+          width: 100px
+          height: 1px
+          opacity: 0.3
+          background-color: #2f3030
+      .also-like-products-prev-line
+        @extend %also-like-products-line
+      
+      .also-like-products-prev-text
+        font-size: 14px
+        line-height: 26px
+        letter-spacing: 0.7px
+        padding-left: 10px
+    .also-like-products-info
+      display: flex
+      flex-direction: column
+      text-align: center
+      padding: 0 10px
+      .also-like-products-series
+        padding-top: 20px
+        font-size: 14px
+        line-height: 28px
+        letter-spacing: 0.28px
+        color: #666
+      .also-like-products-name
+        font-size: 26px
+        line-height: 28px
+        letter-spacing: 0.52px
+      .also-like-products-price
+        display: flex
+        justify-content: center
+        align-items: center
+        padding-top: 10px
+        .also-like-products-price-og
+          text-decoration: line-through
+          color: #666
+          padding-left:10px 
+        .also-like-products-price-text
+          padding: 0 10px
+        .also-like-products-price-line
+          width: 1px
+          height: 15px
+          opacity: 0.5
+          background-color: #111218
+          margin-right: 10px
+    .also-like-products-next
+      justify-content: right
+footer
+  width: 100%
+  height: 570px
+  background-color: #2b2c2c
+  color: white
+  display: flex
+  flex-direction: column
+
+  .bottom-top
+    height: 20%
+    width: 100%
+    text-align: center
+    // border: 1px solid white
+    display: flex
+    flex-direction: column
+    align-items: center
+    .bottom-top-line
+      width: 1px
+      height: 100px
+      opacity: 0.5
+      background-color: #808080
+      position: relative
+      top: -20px
+    .bottom-top-text
+      color: #808080
+      font-size: 14px
+      line-height: 1.86
+      letter-spacing: 0.7px
+  .bottom-links
+    width: 100%
+    height: 33%
+    // border: 1px solid white
+    padding-top: 50px 
+    .bottom-links-top
+      display: flex
+      justify-content: space-evenly
+      margin: 0 460px
+      .links-top
+        font-size: 22px
+        line-height: 3.28
+        letter-spacing: 1.1px
+    .bottom-links-below
+      display: flex
+      justify-content: space-evenly
+      margin: 0 526px
+      padding-top: 30px 
+      .links-below
+        font-size: 14px
+        line-height: 5.15px
+        letter-spacing: 0.7px          
+      .links-below-line
+        width: 1px
+        height: 14px
+        opacity: 0.2
+        background: #fff 
+  .bottom-below
+    width: 100%
+    height: 34%
+    // border: 1px solid white
+    display: flex
+    align-items: center
+    justify-content: space-around
+    .bottom-below-left
+      width: 273px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      margin-bottom: 50px
+      .bottom-below-left-top
+        
+        font-size: 15px
+        line-height: 4.81
+        color: rgba(255, 255, 255, 0.5)
+        opacity: 0.5
+      .bottom-below-left-social
+        width: 100%
+        display: flex
+        justify-content: space-around
+        align-items: center
+        filter: invert(1)
+    .bottom-below-mid
+      width: 550px
+      border-bottom: 1px solid #fff
+      height: 21px
+      display: flex
+      justify-content: space-evenly
+      padding-bottom: 21px 
+      input
+        width: 458px
+        height: 13px
+        font-size: 18px
+        background-color: #2b2c2c
+        line-height: 1.33
+        letter-spacing: 0.9px
+        border: none
+        font-family: JaguarJC-Book
+      .subscribe
+        width: 74PX
+        font-size: 14PX
+        line-height: 1
+        letter-spacing: 0.7PX
+    .bottom-below-right
+      width: 264px
+      opacity: 0.5
+      font-size: 13px
+      line-height: 1.69
+      letter-spacing: 0.13px
+      text-align: right
+      color: rgba(255, 255, 255, 0.5)
+    
+
+      
+  
+       
+@media (max-width: 1024px) and (min-width: 768px)
+  .container
+    .info
+      margin-left: 0
+      width: 50%
+      justify-content: center
+      .story
+        display: none
+      .experience
+        display: none
+      
+    .control
+      .branch
+        display: none
+  .product-detail-all
+    flex-direction: column
+    height: 100%
+    padding: 115px 40px 56px 40px
+    
+    .product-image
+      .control-navbar-back
+        width: 100%
+        justify-content: center
+      .control-swiper
+        background: #ededed
+        padding: 18px 0
+    .product-info
+      padding: 0
+      max-width: 100%
+    .anchor-navbar
+    border: none
+    margin: 0
+    
+
+  .article
+    margin: 100px 0
+    .article-content
+      display: flex
+      flex-direction: column
+      margin: 50px 0
+      .content-img,.content-title
+        width: 100%
+        height: 100%
+    .article-content-second
+      margin: 0
+    .article-lsc
+      margin: 0
+      height: fit-content
+      .lsc-all
+        padding: 10px 10px
+  .specification
+    margin: 0
+    width: 100%
+    .specification-content
+      margin: 0
+      width: 100%
+  .also-like
+    .also-like-products
+      justify-content: center
+      .also-like-products-prev,.also-like-products-info3,.also-like-products-info4
+        display: none
+  footer
+    .bottom-links   
+      .bottom-links-top
+        margin: 0
+      .bottom-links-below
+        margin: 0
+        padding: 30px 0
+    .bottom-below
+      flex-direction: column
+      .bottom-below-right
+        margin: 50px 0
+        text-align: center
+       
+@media (max-width: 767px)
+  .container
+    padding: 0
+    
+    .control
+      width: 80%
+      .branch
+        display: none
+      
+        
+    .info
+      margin-left: 0
+      // width: 30%
+      justify-content: center
+      .story
+        display: none
+      .experience
+        display: none
+      ul
+        display: flex
+        justify-content: space-evenly
+        position: fixed
+        bottom: 0
+        left: 0
+        z-index: 999
+        height: 55px
+        background: white
+        margin: 0
+        width: 100%
+        li
+          width: 10%
+        .bookingnow
+          display: initial
+          width: 150px
+          height: 55px
+          // position: fixed
+          // right: 0
+      .btn
+        padding-right: 10px 
+ 
+  .product-detail-all
+    flex-direction: column
+    height: 100%
+    padding: 115px 0 0 0
+    margin: 0
+    .product-image
+      .control-navbar-back
+        width: 100%
+        justify-content: center
+      .control-swiper
+        background: #ededed
+        padding: 18px 0
+    .product-info
+      padding: 0
+      max-width: 100%
+  .anchor-navbar
+    border: none
+    margin: 0
+    
+    .navbar-intro-spec-related
+      background: #ededed
+      padding: 0
+      display: flex
+      justify-content: space-around
+      align-items: center
+      height: 56px
+      i
+        display: initial
+      .navbar-spec
+        display: none
+      .navbar-related
+        display: none
+          
+  .article
+    margin: 50px 0
+    .article-content
+      display: flex
+      flex-direction: column
+      margin: 50px 0
+      .content-img,.content-title
+        width: 100%
+        padding: 0
+        
+    .article-content-second
+      margin: 0
+    .article-lsc
+      margin: 0
+      height: fit-content
+      .lsc-all
+        padding: 10px 10px
+  .specification
+    margin: 0
+    width: 100%
+    .specification-content
+      margin: 0
+      width: 100%
+      display: flex
+      flex-direction: column
+      .content
+        margin: 0
+        padding: 0 0 0 80px
+        display: flex
+        flex-direction: column
+        .product-name
+          height: 50%
+          width: 100%
+          line-height: 35px
+        .product-info
+          padding: 0
+          height: 50%
+          line-height: 35px
+          text-align: left
+  .also-like
+    .also-like-products
+      justify-content: center
+      .also-like-products-prev,.also-like-products-info3,.also-like-products-info4,.also-like-products-info2
+        display: none
+  footer
+    height: 100%
+    .bottom-links   
+      .bottom-links-top
+        margin: 0
+        flex-wrap: wrap
+        padding-bottom: 30px
+        .links-top
+          width: 130px
+          line-height: 2
+      .bottom-links-below
+        margin: 0
+        flex-wrap: wrap
+        justify-content: center
+        border: solid 1px rgba(255, 255, 255, 0.2)
+        padding-bottom: 30px
+        .links-below
+          width: 130px
+          line-height: 2
+          height: 32px
+        .returns
+          width: 260px
+        .links-below-line
+          display: none
+    .bottom-below
+      // display: none
+      flex-direction: column
+      margin-bottom: 65px
+      .bottom-below-mid
+        width: 80%
+        
+      .bottom-below-right
+        margin: 50px 0
+        text-align: center    
+
+
+  
+  
 
 
         
